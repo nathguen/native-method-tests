@@ -7,6 +7,8 @@ describe('map', () => {
       const arr = ['a', 'b', 'c'];
       const d = 'd';
 
+      const newArray = [];
+
       expect(['a', 'b', 'c', d]).toEqual(newArray);
     });
 
@@ -15,6 +17,8 @@ describe('map', () => {
       const num3 = 3;
       const num4 = 4;
 
+      const newArray = [];
+
       expect([1, 2, num3, num4]).toEqual(newArray);
     });
 
@@ -22,12 +26,16 @@ describe('map', () => {
       const arr1 = [1, 2];
       const arr2 = [3, 4];
 
+      const combinedArray = [];
+
       expect([arr1[0], arr1[1], arr2[0], arr2[1]]).toEqual(combinedArray);
     });
 
     it('should return a new array that combines two arrays', () => {
       const arr1 = ['a', 'b'];
       const arr2 = ['c', 'd'];
+
+      const combinedArray = [];
 
       expect([arr1[0], arr1[1], arr2[0], arr2[1]]).toEqual(combinedArray);
     });
@@ -50,6 +58,8 @@ describe('map', () => {
         }
       ];
 
+      const updatedArr = [];
+
       expect(arr[0].views).toBe(1);
       expect(updatedArr[0].views).toBe(2);
       expect(updatedArr[0].views).toBe(arr[0].views + 1);
@@ -69,6 +79,7 @@ describe('map', () => {
         }
       ];
 
+      const updatedArr = [];
 
       expect(arr[0].views).toBe(7);
       expect(updatedArr[0].views).toBe(9);
@@ -82,6 +93,7 @@ describe('map', () => {
     it('should return an array with one less item', () => {
       const arr = ['a', 'b', 'c'];
 
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual(['a', 'c']);
@@ -90,6 +102,7 @@ describe('map', () => {
     it('should return an array with one item', () => {
       const arr = ['a', 'b', 'c'];
 
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual(['b']);
@@ -111,6 +124,7 @@ describe('map', () => {
         }
       ];
 
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual([{ id: 1, title: 'some title' }, { id: 3, title: 'last title' }]);
@@ -132,7 +146,7 @@ describe('map', () => {
         }
       ];
 
-
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual([{ id: 1, title: 'some title' }]);
@@ -154,7 +168,7 @@ describe('map', () => {
         }
       ];
 
-
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual([{ id: 3, title: 'last title' }]);
@@ -176,7 +190,7 @@ describe('map', () => {
         }
       ];
 
-
+      const filteredArr = [];
 
       expect(arr).not.toEqual(filteredArr);
       expect(filteredArr).toEqual([{ id: 1, title: 'some title' }, { id: 2, title: 'another title' }]);
@@ -204,6 +218,7 @@ describe('map', () => {
         }
       ];
 
+      const total = 0;
 
       expect(total).toBe(arr[0].views + arr[1].views + arr[2].views);
     });
@@ -227,7 +242,7 @@ describe('map', () => {
         }
       ];
 
-
+      const total = 0;
 
       expect(total).toBe(arr[0].views + arr[1].views + arr[2].views + 2);
     });
@@ -237,6 +252,7 @@ describe('map', () => {
     it('should return an alphabetized list', () => {
       const arr = ['d', 'b', 'a', 'c'];
 
+      const alphabetized = [];
 
       expect(alphabetized).toEqual(['a', 'b', 'c', 'd']);
     });
@@ -259,6 +275,8 @@ describe('map', () => {
           lastName: 'Adamson' // weird last name, I know
         }
       ];
+
+      const alphabetized = [];
 
 
       expect(alphabetized).toEqual([
@@ -283,6 +301,7 @@ describe('map', () => {
     it('should return a reverse-alphabetized list', () => {
       const arr = ['d', 'b', 'a', 'c'];
 
+      const alphabetized = [];
 
       expect(alphabetized).toEqual(['d', 'c', 'b', 'a']);
     });
